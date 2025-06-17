@@ -20,7 +20,7 @@
 
     body {
       display: flex;
-      align-items: flex-start; /* moved from center to top */
+      align-items: flex-start;
       justify-content: center;
       background-image: url('mobile.jpg');
       background-size: cover;
@@ -33,15 +33,20 @@
       text-align: center;
       color: white;
       background: rgba(0, 0, 0, 0.4);
-      margin-top: 20vh; /* <- controls how high everything is */
+      margin-top: 15vh;
       padding: 2rem;
       border-radius: 12px;
+    }
+
+    .logo-img {
+      width: 120px;
+      margin-bottom: 1.2rem;
     }
 
     .logo-text {
       font-size: 2rem;
       font-weight: bold;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
       letter-spacing: 1px;
     }
 
@@ -73,6 +78,7 @@
 </head>
 <body>
   <div class="container">
+    <img src="logo.jpg" alt="Pressed Penny Logo" class="logo-img" />
     <div class="logo-text">PRESSED PENNY KC</div>
     <div class="nav-links">
       <a href="#menus">Menus</a>
