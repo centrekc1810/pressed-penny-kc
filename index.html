@@ -18,10 +18,11 @@
     }
 
     body {
-      background-image: url('mobile.jpg'); /* single image for now */
+      background-image: url('mobile.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     .overlay {
@@ -30,7 +31,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* darkens image slightly */
+      background: rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -38,40 +39,3 @@
       text-align: center;
       padding: 2rem;
     }
-
-    .logo {
-      width: 160px;
-      margin-bottom: 1.5rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #ffd700;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <img class="logo" src="logo.png" alt="Pressed Penny KC Logo" />
-    <div class="nav-links">
-      <a href="#menus">Menus</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#events">Upcoming Events</a>
-    </div>
-  </div>
-</body>
-</html>
