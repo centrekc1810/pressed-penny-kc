@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page</title>
+  <title>Pressed Penny KC</title>
   <style>
     * {
       margin: 0;
@@ -18,10 +18,10 @@
     }
 
     body {
+      background-image: url('mobile.jpg'); /* single image for now */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      transition: background-image 0.3s ease-in-out;
     }
 
     .overlay {
@@ -30,7 +30,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* optional dark overlay for readability */
+      background: rgba(0, 0, 0, 0.3); /* darkens image slightly */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -40,10 +40,8 @@
     }
 
     .logo {
-      font-size: 2rem;
-      color: white;
+      width: 160px;
       margin-bottom: 1.5rem;
-      font-weight: bold;
     }
 
     .nav-links {
@@ -68,23 +66,12 @@
 </head>
 <body>
   <div class="overlay">
-    <div class="logo">YOUR LOGO</div>
+    <img class="logo" src="logo.png" alt="Pressed Penny KC Logo" />
     <div class="nav-links">
       <a href="#menus">Menus</a>
       <a href="#contact">Contact Us</a>
       <a href="#events">Upcoming Events</a>
     </div>
   </div>
-
-  <script>
-    function setBackgroundImage() {
-      const isMobile = window.innerWidth <= 768;
-      const imageUrl = isMobile ? 'mobile-image.jpg' : 'desktop-image.jpg';
-      document.body.style.backgroundImage = `url('${imageUrl}')`;
-    }
-
-    setBackgroundImage();
-    window.addEventListener('resize', setBackgroundImage);
-  </script>
 </body>
 </html>
