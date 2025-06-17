@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coming Soon</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body style="font-family: sans-serif; text-align: center; margin-top: 10%;">
+    <h1>🍺 Your Pub Is Coming Soon</h1>
+    <p>Good drinks. Good people. Real soon.</p>
+  </body>
+</html>
