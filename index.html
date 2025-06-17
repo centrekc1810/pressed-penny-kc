@@ -11,4 +11,71 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-      font-family: 'Helvetica Neue', sans-
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #fff;
+    }
+
+    /* Desktop Default Background */
+    body {
+      background: url('desktop-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    /* Mobile Background Override */
+    @media only screen and (max-width: 768px) {
+      body {
+        background: url('mobile-image.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+    }
+
+    /* Top Navigation Links */
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* Logo */
+    .logo {
+      margin-top: 10vh;
+    }
+
+    .logo img {
+      max-width: 300px;
+      width: 80%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="#">Menus</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Upcoming Events</a>
+  </div>
+
+  <div class="logo">
+    <img src="your-logo.png" alt="The Pressed Penny Tavern Logo" />
+  </div>
+
+</body>
+</html>
