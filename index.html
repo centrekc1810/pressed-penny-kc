@@ -3,79 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Pressed Penny Tavern</title>
+  <title>Landing Page</title>
   <style>
-    /* Reset + Global Styles */
-    html, body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       height: 100%;
       overflow: hidden;
-      font-family: 'Helvetica Neue', sans-serif;
-      color: #fff;
+      font-family: sans-serif;
     }
 
-    /* Desktop Default Background */
     body {
-      background: url('desktop-image.jpg') no-repeat center center fixed;
       background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s ease-in-out;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* optional dark overlay for readability */
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-    }
-
-    /* Mobile Background Override */
-    @media only screen and (max-width: 768px) {
-      body {
-        background: url('mobile-image.jpg') no-repeat center center fixed;
-        background-size: cover;
-      }
-    }
-
-    /* Top Navigation Links */
-    .nav {
-      display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 40px;
-      padding: 40px 20px 0;
-      font-size: 1rem;
-      font-weight: 600;
+      text-align: center;
+      padding: 2rem;
     }
 
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-
-    .nav a:hover {
-      opacity: 0.7;
-    }
-
-    /* Logo */
     .logo {
-      margin-top: 10vh;
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
     }
 
-    .logo img {
-      max-width: 300px;
-      width: 80%;
-      height: auto;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffd700;
     }
   </style>
 </head>
 <body>
-
-  <div class="nav">
-    <a href="#">Menus</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Upcoming Events</a>
+  <div class="overlay">
+    <div class="logo">YOUR LOGO</div>
+    <div class="nav-links">
+      <a href="#menus">Menus</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#events">Upcoming Events</a>
+    </div>
   </div>
 
-  <div class="logo">
-    <img src="your-logo.png" alt="The Pressed Penny Tavern Logo" />
-  </div>
+  <script>
+    function setBackgroundImage() {
+      const isMobile = window.innerWidth <= 768;
+      const imageUrl = isMobile ? 'mobile-image.jpg' : 'desktop-image.jpg';
+      document.body.style.backgroundImage = `url('${imageUrl}')`;
+    }
 
+    setBackgroundImage();
+    window.addEventListener('resize', setBackgroundImage);
+  </script>
 </body>
 </html>
