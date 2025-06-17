@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Coming Soon</title>
-    <meta charset="UTF-8" />
-  </head>
-  <body style="font-family: sans-serif; text-align: center; margin-top: 10%;">
-    <h1>🍺 Your Pub Is Coming Soon</h1>
-    <p>Good drinks. Good people. Real soon.</p>
-  </body>
-</html>
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: url('desktop-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background: url('mobile-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
